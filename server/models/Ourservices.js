@@ -21,4 +21,4 @@ Ourservices.add({
   },
 });
 
-Ourservices.register();
+Our-services.register();
