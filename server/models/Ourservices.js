@@ -2,7 +2,9 @@ const keystone = require('keystone');
 
 const { Types } = keystone.Field;
 
-const ourservices = new keystone.List('ourservices');
+const Ourservices = new keystone.List('Ourservices', {
+  label: 'Nossos serviços '
+});
 
 Ourservices.add({
   name: {
@@ -10,15 +12,21 @@ Ourservices.add({
     required: true,
     initial: true,
     index: true,
+    initial: true,
+    label: 'Nome do Serviço',
+    note:'Coloque o nome do serviço'
   },
   image: {
     type: Types.CloudinaryImages,
     require: true,
+    initial: true,
+    label: 'Imagem do Serviço'
   },
-  discription: {
-      type: types.text,
+  description: {
+      type: Types.Textarea,
       require: true,
+      label:'Descrição sobre o Serviço',
   },
 });
 
-Our-services.register();
+Ourservices.register();
