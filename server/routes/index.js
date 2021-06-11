@@ -4,6 +4,7 @@ const cors = require('cors');
 
 
 const CaseController = require('../controller/Cases');
+const Ourservices = require('../controller/Ourservices');
 
 module.exports = (app) => {
   app.use(cors());
@@ -13,6 +14,8 @@ module.exports = (app) => {
   });
 
   app.get('/api/cases', CaseController.getCaseController);
+  app.get('/api/ourservices', Ourservices.getOurServicesController);
+
 
   app.get('*', (req, res) => {
 		res.redirect('/');
