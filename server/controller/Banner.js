@@ -1,9 +1,9 @@
 const keystone = require('keystone');
 
-const Banner = keystone.list('Banner');
+const BannerController = keystone.list('Banner');
 
 module.exports = {
-  getBannerController (req, res) {
+  getBannerController(req, res) {
     BannerController.model.find((err, data) =>{
         if(err){
           console.log(err);
