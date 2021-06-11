@@ -13,9 +13,11 @@ Banner.add({
     initial: true,
   },
   description: {
-      type: Types.Textarea,
-      require: true,
-      label:'Descrição do banner'
+    type: Types.Textarea,
+    required: true,
+    initial: true,
+    label: 'Texto da seção',
+    note: 'Faça a descrição do banner',
   },
 });
 
