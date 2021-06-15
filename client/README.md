@@ -1,68 +1,117 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+    <img src="https://raw.githubusercontent.com/jrmmendes/citi-doc-utils/master/citi_black.png">
+</p>
+<p align="center">
+    <img src="https://img.shields.io/badge/staging%20branch-develop-ffffff.svg">
+    <img src="https://img.shields.io/badge/production%20branch-main-101010.svg">
+</p>
+  
+<h1> CJR </h1>
+  
+<p>Project made for CJR during the PTA 2021.1</p>
+<br>
+<h2>Technologies Used</h2>
+  
+<ul>
+    <li><b>React:</b> A Javascript library built by facebook for web application development.</li>
+    <li><b>KeystoneJS:</b> Node.js CMS & web app platform.</li>
+    <li><b>MongoDB:</b> NoSQL Database.</li>
+    <li><b>Cloudinary:</b> Cloud service that offers a solution to a web application's entire image management pipeline.</li>
+</ul>
+<br>
+  
+<h2>How to install and run the project</h2>
+  
+<h3>1. Install dependencies</h3>
+<p>Run <code>yarn install</code> or <code>npm install</code> on both client and server folders, this command will install the project's dependencies.</p>    
+<h3>2. Create MongoDB cluster and get the url</h3>
+<ol>
+    <li>If you don't have one, create a mongodb account, then create the cluster for this project.</li>    
+    <li>On the cluster's screen, go to <b>Database Access > Database Users > Add New Database User</b>, then create the user (remember the username and password, we're going to need them later).</li>    
+    <li>Now go to <b>Network Access > IP Whitelist > Add IP Adress > Current IP Adress</b>, to add your current IP address to the cluster's whitelist, you will need to do this with every source that will access your database.</li>    
+    <li>The mongo url will be: <br> <br> mongodb://[USER]:[PASSWORD]@[SHARD_URL]/[DB_NAME]?ssl=true&replicaSet=[SHARD_NAME]&authSource=admin&retryWrites=true&w=majority</li>
+</ol>
+  
+<h3>3. Create cloudinary account</h3>
+<ol>
+  <li>Go to <a href="https://cloudinary.com/">cloudinary images website</a> and create an account.</li>    
+  <li>Under the <b>Account Details</b> section is a url named <b>API environment variable</b> this is your cloudinary url.</li>
+</ol>
+  
+<h3>4. Create a env file</h3>
+<p>Create a file named <code>.env</code> and, inside of it, place this:</p>
+  
+    PORT=[PORT]
+    MONGO_URI=[MONGO_URI]
+    COOKIE_SECRET=[COOKIE_SECRET]
+    CLOUDINARY_URL=[CLOUDINARY_URL]
+  
+<p>Where:</p>
+  
+<ul>
+    <li>[PORT] is which port you want the server to run on (usually 3001)</li>
+    <li>[MONGO_URI] is the uri you got from step 2.3</li>
+    <li>[COOKIE_SECRET] is a random string used for authentication on the admin.</li>
+    <li>[CLOUDINARY_URL] is the url you got from step 3.2</li>
+</ul>
+  
+<h3>5. Running in development</h3>
+<p>To run this project in development mode, we will need to run two servers, the react one on <code>/client</code> andkeystone on <code>/server</code>.</p>
 
-## Available Scripts
+<p>The command to run react is <code>yarn start</code> or <code>npm start</code> depending on which tool was used on installation, thereact server will run on port <code>3000</code> by default.</p>
 
-In the project directory, you can run:
+<p>Before running the keystone server, go to <code>/server/updates/0.0.1-admin.js</code> and change the admin user as youwant, this user will be the first created, but you will be able to create others and delete this one later.<p>
 
-### `npm start`
+<p>To run keystoneJS server, use the command <code>node index.js</code>, the server will run on whatever port is in thevariale in the env file, you will find the admin interface in <code>http://localhost:[PORT]/admin</code></p>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h3>6. Running in production</h3>
+<p>To run the server in production, go to <code>/client</code> and run the command <code>yarn server</code>, this command will create a <code>react production optimized build</code> and move it to <code>/server</code>.</p>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<p>Then go to <code>/server</code> and run <code>node index.js</code>, you will find the project on <code>http://localhost:[PORT]</code></p>
 
-### `npm test`
+<hr>
+<h2>Project Patterns</h2>
+  
+<h3>Branchs off of <code>develop</code></h3>
+<p>Name the branch following one of these:</p>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  <ul>
+      <li>feat/name-of-the-feature</li>    
+      <li>fix/name-of-the-bugfix</li>    
+  </ul>
 
-### `npm run build`
+<h3>Atomic commits</h3>
+<p>Project commits follow this pattern:</p>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  <ul>
+      <li>feat(name-of-the-branch): Atomic commit</li>    
+      <li>fix(name-of-the-branch): Atomic commit</li>    
+  </ul>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<h3>Pull request on Github</h3>
+<p>For every issue the pull request follows this pattern:</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    **What I did:**
+    - First thing I did...
+    - Second thing I did...
 
-### `npm run eject`
+    **How to test:**
+    - Brief notes on how to test the issue
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    resolves #number-of-the-issue
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h2>Development team</h2>
+  
+<ul>
+    <li>Sofia Melo - <i>Project Manager</i> - <a href="https://github.com/Sofiamdl">Sofiamdl</a></li>
+    <li>Isabela Marinho - <i>Developer</i> - <a href="https://github.com/belamarib">belamarib</a></li>
+    <li>Weverton Heráclito - <i>Developer</i> - <a href="https://github.com/weraclitof">weraclitof</a></li>
+    <li>Daniel - <i>Development analyst</i> - <a href=""></a></li>
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+</ul>
+  
+<h2>Design team</h2>
+  
+<ul>
+    <li>José - <i>Designer</i> - <a href=""></a></li>
+</ul>
