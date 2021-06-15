@@ -16,6 +16,7 @@ function PostList() {
   }, []);
 
   return (
+    <>
     <div className="post-list">
       {posts?.map(({ _id, name, image }) => (
         <div key={_id} className="post-card">
@@ -24,6 +25,7 @@ function PostList() {
         </div>
       ))}
     </div>
+    </>
   );
 }
 
