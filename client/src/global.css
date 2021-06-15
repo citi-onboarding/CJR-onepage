@@ -1,0 +1,49 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+:root {
+    --background-white: #FAFAFA;
+    --dark-blue: #07192E;
+    --green: #73C04A;
+    --dark-grey: #383D43;
+    --light-grey: #D7D7DB;
+    --banner-white: #FEFEFE;
+    --gradient: linear-gradient(180deg, rgba(0, 51, 102, 0) 0%, #003366 82.13%);
+
+}
+
+.container{
+    max-width: 1128px;
+    width: 82vw;
+    margin: auto;
+}
+
+@font-face{
+    font-family: SFMedium;
+    src: url('./assets/SF-Pro-Text-Medium.otf');
+}
+
+@font-face{
+    font-family: SFRegular;
+    src: url('./assets/SF-Pro-Text-Regular.otf');
+}
+
+h1{
+    font-family: SFMedium;
+    font-size: 48px;
+}
+
+h2{
+    font-family: SFRegular;
+    font-size: 48px;
+}
+
+h3{
+    font-family: SFRegular;
+    font-size: 24px;
+}
+
+p{
+    font-family: SFRegular;
+    font-size: 18px;
+}
