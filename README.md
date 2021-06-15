@@ -1,57 +1,117 @@
-# How to run this boilerplate
-> A tutorial on how to create mongodb and cloudinary > accounts, install dependencies and run the project.
-
-## 1. Install dependencies
-Run `yarn install` or `npm install` on both client and server folders, this command will install the project's dependencies.
-
-## 2. Create MongoDB cluster and get the url
-1. If you don't have one, [create a mongodb account](https://www.mongodb.com/cloud), then create the cluster for this project.
-
-2. On the cluster's screen, go to **Database Access > Database Users > Add New Database User**, then create the user (remember the username and password, we're going to need them later).
-
-3. Now go to **Network Access > Ip Whitelist > Add IP Adress > Current Ip Adress**, to add your current ip address to the cluster's whitelist, you will need to do this with every source that will access your database.
-
-4. The mongo url will be:
-
-    mongodb://[USER]:[PASSWORD]@[SHARD_URL]/[DB_NAME]?ssl=true&replicaSet=[SHARD_NAME]&authSource=admin&retryWrites=true&w=majority
-
-## 3. Create cloudinary account
-1. Go to [cloudinary images website](https://cloudinary.com/) and create an account.
-
-2. Under the **Account Details** section is a url named **API environment variable** this is your cloudinary url.
-
-## 4. Create a env file
-Create a file named `.env` and, inside of it, place this:
-
+<p align="center">
+    <img src="https://raw.githubusercontent.com/jrmmendes/citi-doc-utils/master/citi_black.png">
+</p>
+<p align="center">
+    <img src="https://img.shields.io/badge/staging%20branch-develop-ffffff.svg">
+    <img src="https://img.shields.io/badge/production%20branch-main-101010.svg">
+</p>
+  
+<h1> CJR </h1>
+  
+<p>Project made for CJR during the PTA 2021.1</p>
+<br>
+<h2>Technologies Used</h2>
+  
+<ul>
+    <li><b>React:</b> A Javascript library built by facebook for web application development.</li>
+    <li><b>KeystoneJS:</b> Node.js CMS & web app platform.</li>
+    <li><b>MongoDB:</b> NoSQL Database.</li>
+    <li><b>Cloudinary:</b> Cloud service that offers a solution to a web application's entire image management pipeline.</li>
+</ul>
+<br>
+  
+<h2>How to install and run the project</h2>
+  
+<h3>1. Install dependencies</h3>
+<p>Run <code>yarn install</code> or <code>npm install</code> on both client and server folders, this command will install the project's dependencies.</p>    
+<h3>2. Create MongoDB cluster and get the url</h3>
+<ol>
+    <li>If you don't have one, create a mongodb account, then create the cluster for this project.</li>    
+    <li>On the cluster's screen, go to <b>Database Access > Database Users > Add New Database User</b>, then create the user (remember the username and password, we're going to need them later).</li>    
+    <li>Now go to <b>Network Access > IP Whitelist > Add IP Adress > Current IP Adress</b>, to add your current IP address to the cluster's whitelist, you will need to do this with every source that will access your database.</li>    
+    <li>The mongo url will be: <br> <br> mongodb://[USER]:[PASSWORD]@[SHARD_URL]/[DB_NAME]?ssl=true&replicaSet=[SHARD_NAME]&authSource=admin&retryWrites=true&w=majority</li>
+</ol>
+  
+<h3>3. Create cloudinary account</h3>
+<ol>
+  <li>Go to <a href="https://cloudinary.com/">cloudinary images website</a> and create an account.</li>    
+  <li>Under the <b>Account Details</b> section is a url named <b>API environment variable</b> this is your cloudinary url.</li>
+</ol>
+  
+<h3>4. Create a env file</h3>
+<p>Create a file named <code>.env</code> and, inside of it, place this:</p>
+  
     PORT=[PORT]
     MONGO_URI=[MONGO_URI]
     COOKIE_SECRET=[COOKIE_SECRET]
     CLOUDINARY_URL=[CLOUDINARY_URL]
+  
+<p>Where:</p>
+  
+<ul>
+    <li>[PORT] is which port you want the server to run on (usually 3001)</li>
+    <li>[MONGO_URI] is the uri you got from step 2.3</li>
+    <li>[COOKIE_SECRET] is a random string used for authentication on the admin.</li>
+    <li>[CLOUDINARY_URL] is the url you got from step 3.2</li>
+</ul>
+  
+<h3>5. Running in development</h3>
+<p>To run this project in development mode, we will need to run two servers, the react one on <code>/client</code> andkeystone on <code>/server</code>.</p>
 
-Where:
-- [PORT] is which port you want the server to run on (usually 3001)
-- [MONGO_URI] is the uri you got from [step 2.3](##-2.-create-mongodb-cluster-and-get-the-url)
-- [COOKIE_SECRET] is a random string used for authentication on the admin.
-- [CLOUDINARY_URL] is the url you got from [step 3.2](##3.-create-cloudinary-account)
+<p>The command to run react is <code>yarn start</code> or <code>npm start</code> depending on which tool was used on installation, thereact server will run on port <code>3000</code> by default.</p>
 
-## 5. Running in development
-To run this project in development mode, we will need to run two servers, the react one on `/client` and keystone on `/server`.
+<p>Before running the keystone server, go to <code>/server/updates/0.0.1-admin.js</code> and change the admin user as youwant, this user will be the first created, but you will be able to create others and delete this one later.<p>
 
-The command to run react is `yarn start` or `npm start` depending on which tool was used on [installation](##1.-install-dependencies), the react server will run on port `3000` by default.
+<p>To run keystoneJS server, use the command <code>node index.js</code>, the server will run on whatever port is in thevariale in the env file, you will find the admin interface in <code>http://localhost:[PORT]/admin</code></p>
 
-Before running the keystone server, go to `/server/updates/0.0.1-admin.js` and change the admin user as you want, this user will be the first created, but you will be able to create others and delete this one later.
+<h3>6. Running in production</h3>
+<p>To run the server in production, go to <code>/client</code> and run the command <code>yarn server</code>, this command will create a <code>react production optimized build</code> and move it to <code>/server</code>.</p>
 
-To run keystoneJS server, use the command `node index.js`, the server will run on whatever port is in the variale in the env file, you will find the admin interface in `http://localhost:[PORT]/admin`
+<p>Then go to <code>/server</code> and run <code>node index.js</code>, you will find the project on <code>http://localhost:[PORT]</code></p>
 
-## 6. Running in production
-To run the server in production, go to `/client` and run the command `yarn server`, this command will create a `react production optimized build` and move it to `/server`.
+<hr>
+<h2>Project Patterns</h2>
+  
+<h3>Branchs off of <code>develop</code></h3>
+<p>Name the branch following one of these:</p>
 
-Then go to `/server` and run `node index.js`, you will find the project on `http://localhost:[PORT]`
+  <ul>
+      <li>feat/name-of-the-feature</li>    
+      <li>fix/name-of-the-bugfix</li>    
+  </ul>
 
-- - -
+<h3>Atomic commits</h3>
+<p>Project commits follow this pattern:</p>
 
-#### Developed by [Jorrmungandr](https://github.com/Jorrmungandr)
+  <ul>
+      <li>feat(name-of-the-branch): Atomic commit</li>    
+      <li>fix(name-of-the-branch): Atomic commit</li>    
+  </ul>
 
-This boilerplate was meant to be used in [CITi's](https://github.com/CITi-UFPE) selective process on 2020.1, to help the development of onepage websites.
+<h3>Pull request on Github</h3>
+<p>For every issue the pull request follows this pattern:</p>
 
-- - -
+    **What I did:**
+    - First thing I did...
+    - Second thing I did...
+
+    **How to test:**
+    - Brief notes on how to test the issue
+
+    resolves #number-of-the-issue
+
+<h2>Development team</h2>
+  
+<ul>
+    <li>Sofia Melo - <i>Project Manager</i> - <a href="https://github.com/Sofiamdl">Sofiamdl</a></li>
+    <li>Isabela Marinho - <i>Developer</i> - <a href="https://github.com/belamarib">belamarib</a></li>
+    <li>Weverton Heráclito - <i>Developer</i> - <a href="https://github.com/weraclitof">weraclitof</a></li>
+    <li>Daniel - <i>Development analyst</i> - <a href=""></a></li>
+
+</ul>
+  
+<h2>Design team</h2>
+  
+<ul>
+    <li>José - <i>Designer</i> - <a href=""></a></li>
+</ul>
