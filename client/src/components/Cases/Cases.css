@@ -1,0 +1,19 @@
+body, html {
+    margin: 0;
+}
+
+.case{
+    width: 404px;
+    height: 305px;
+}
+
+#case-title{
+    font-size: 48px;
+    color: #FFFFFF;
+}
+
+#case-description{
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
