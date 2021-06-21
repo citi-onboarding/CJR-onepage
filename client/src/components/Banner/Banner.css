@@ -1,0 +1,7 @@
+body, html {
+    margin: 0;
+  }
+
+.banner-section{
+    background-color: var(--dark-blue);
+}
