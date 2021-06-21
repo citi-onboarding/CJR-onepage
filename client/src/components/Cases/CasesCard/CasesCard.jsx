@@ -32,17 +32,15 @@ function CasesCard() {
       <div className="case-section">
         <div class='container-cases'>
           <div class='case-left'>
-            <Cases/>
+            <Cases />
           </div>
           <div class='case-right'>
             <Slider {...settings}>
               {casesCard?.map(({ _id, title, image, description }) => (
                 <div key={_id} className="cases-card">
                   <img id='card-image' src={image[0]?.url} alt="Case de Exemplo" />
-                  <div class='case-card-text'>
-                    <p id="case-card-title">{title}</p>
-                    <p id="case-card-description">{description}</p>
-                  </div>
+                  <p id="case-card-title">{title}</p>
+                  <p id="case-card-description">{description}</p>
                 </div>
               ))}
             </Slider>
