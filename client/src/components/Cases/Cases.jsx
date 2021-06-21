@@ -7,7 +7,7 @@ function Cases() {
   const [cases, setCases] = useState([]);
 
   const loadCases = async () => {
-    const res = await axios.get('http://localhost:3001/api/case-descriptions');
+    const res = await axios.get('http://localhost:3001/api/casedescription');
     setCases(res.data);
   };
 
@@ -18,12 +18,16 @@ function Cases() {
   
 
   return (
-    <div className="case">
-      {cases?.map(({description}) => (
-          <>
-          <h1 id='case-title'>Cases</h1>
-          <p id="case-description">{description}</p>
-          </>
+    <div className="casetext">
+      {cases?.map(({ description }) => (
+        <>
+          <div class='um'>
+            <h1 id='case-title'>Cases</h1>
+          </div>
+          <div class='dois'>
+            <p id="case-description">{description}</p>
+          </div>
+        </>
       ))}
     </div>
   );

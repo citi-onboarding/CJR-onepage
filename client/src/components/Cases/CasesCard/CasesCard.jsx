@@ -19,26 +19,36 @@ function CasesCard() {
     loadCasesCard();
   }, []);
 
-
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 900,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
 
   return (
     <>
-    <div className="case-section">
-      <div class='1'>
-      <Cases/>
-      </div>
-      <div class='2'>
-      <Slider>
-      {casesCard?.map(({ _id, title, image, description}) => (
-        <div key={_id} className="cases-card">
-          <img id='card-image'src={image[0]?.url} alt="Case de Exemplo"/>
-          <p id="case-card-title">{title}</p>
-          <p id="case-card-description">{description}</p>
+      <div className="case-section">
+        <div class='container-cases'>
+          <div class='case-left'>
+            <Cases/>
+          </div>
+          <div class='case-right'>
+            <Slider {...settings}>
+              {casesCard?.map(({ _id, title, image, description }) => (
+                <div key={_id} className="cases-card">
+                  <img id='card-image' src={image[0]?.url} alt="Case de Exemplo" />
+                  <div class='case-card-text'>
+                    <p id="case-card-title">{title}</p>
+                    <p id="case-card-description">{description}</p>
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
         </div>
-      ))}
-      </Slider>
       </div>
-    </div>
     </>
   );
 }

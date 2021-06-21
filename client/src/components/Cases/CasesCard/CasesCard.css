@@ -4,47 +4,195 @@
 }
 
 .case-section {  
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-color: var(--dark-blue);
   height: 511px;
-  width: 100vw;
+  width: 100%;
+  background-color: var(--background-white);
 }
 
+.container-cases{
+  max-width: 1120px;
+  width: 100%;
+  height: 511px;
+  margin: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
 .case-section .slick-slider {
-  width: 648px;
+  width: 550px;
   height: 305px;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+
 
 .case-section .slick-list {
   height: 305px;
   width: 472px;
-  color: linear-gradient(180deg, rgba(0, 51, 102, 0) 0%, #003366 82.13%);
 }
 
 #card-image {
   width: 472px;
   height: 305px;
+  mask-image: linear-gradient(to top, rgba(0, 51, 102, 0) 0%, #003366 82.13%);
+}
+
+.case-section .slick-dots {
+  display: flex !important;
+  justify-content: center;
+  order: 3;
+}
+
+/* hiding all bullets by default */
+.case-section .slick-dots li {
+  display: none
+}
+/* only displaying the active bullets and the 2 bullets next to it */
+.case-section .slick-dots li.slick-active,
+.case-section .slick-dots li.slick-active + li,
+.case-section .slick-dots li.slick-active + li + li {
+  display: block;
+}
+/* displaying the last three bullets when slick-active class isn't applied to any li before them  */
+.case-section .slick-dots li:nth-last-child(1),
+.case-section .slick-dots li:nth-last-child(2),
+.case-section .slick-dots li:nth-last-child(3) {
+  display: block;
+}
+/* hiding the last three bullets if slick-active exist before them */
+.case-section .slick-dots li.slick-active ~ li:nth-last-child(1),
+.case-section .slick-dots li.slick-active ~ li:nth-last-child(2),
+.case-section .slick-dots li.slick-active ~ li:nth-last-child(3) {
+  display: none;
+}
+/* specific conditions to always display the last three bullets */
+.case-section .slick-dots li.slick-active + li + li:nth-last-child(3),
+.case-section .slick-dots li.slick-active + li + li:nth-last-child(2),
+.case-section .slick-dots li.slick-active + li + li:nth-last-child(1),
+.case-section .slick-dots li.slick-active + li:nth-last-child(3),
+.case-section .slick-dots li.slick-active + li:nth-last-child(2),
+.case-section .slick-dots li.slick-active + li:nth-last-child(1){
+  display: block;
+}
+
+
+.case-section .slick-dots li button:before {
+	content: url('../../../assets/Ellipse 3.svg');
+}
+.case-section .slick-dots li.slick-active button:before{
+	content: url('../../../assets/Ellipse 2.svg');
+}
+
+.case-section .slick-prev{
+  width: 56px;
+  height: 56px;
+}
+
+.case-section .slick-next{
+  width: 56px;
+  height: 56px;
+}
+
+.case-section .slick-prev:before{
+	content: url('../../../assets/prev.svg');
+	
+}
+.case-section .slick-next:before{
+	content: url('../../../assets/next.svg');
+	
+}
+
+.cases-card{
+  background-color: #003366;
 }
 
 #case-card-title {
   font-family: SFRegular;
-  font-size: 18px;
-  color: var(--regular-white);
-  position: absolute;
-  bottom: 45px;
+  font-size: 300px;
+  color: red;
 }
 
 #case-card-description {
   font-family: SFRegular;
-  font-size: 14px;
-  color: rgba(254, 254, 254, 0.7);
-  position: absolute;
-  bottom: 24px;
+  font-size: 300px;
+  color: red;
 }
 
+.case-right{
+  margin-top: 97px;
+  height: 327px;
+  width: 620px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.case-left{
+  width: 430px;
+}
+
+@media (max-width: 375px){
+  .case-section {  
+    height: 667px;
+    width: 100vw;
+    background-color: var(--background-white);
+  }
+
+  .container-cases{
+    max-width: 332px;
+    width: 91vw;
+    height: 667px;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .case-section .slick-slider {
+    width: 400px;
+    height: 370px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .case-section .slick-list {
+    height: 370px;
+    width: 311px;
+  }
+  
+  #card-image {
+    width: 472px;
+    height: 370px;
+    mask-image: linear-gradient(to top, rgba(0, 51, 102, 0) 0%, #003366 82.13%);
+  }
+
+  .case-section .slick-prev{
+    width: 30px;
+    height: 30px;
+  }
+  
+  .case-section .slick-next{
+    width: 30px;
+    height: 30px;
+  }
+
+  .case-right{
+    height: 394px;
+    width: 349px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .case-left{
+    width: 335px;
+    height: 101px;
+  }
+}
 

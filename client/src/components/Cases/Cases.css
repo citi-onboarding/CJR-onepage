@@ -2,18 +2,53 @@ body, html {
     margin: 0;
 }
 
-.case{
+.casetext{
     width: 404px;
-    height: 305px;
+    height: 140px;
+    position: relative;
+    margin-top: 176px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 #case-title{
     font-size: 48px;
-    color: #FFFFFF;
+    color: var(--dark-blue);
+    font-family: SFRegular;
 }
 
 #case-description{
     font-size: 18px;
-    color: #FFFFFF;
+    color: var(--dark-blue);
+    font-family: SFRegular;
 }
+
+@media (max-width: 375px){
+    .casetext{
+        width: 335px;
+        height: 101px;
+        position: relative;
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    #case-title{
+        font-size: 30px;
+        color: var(--dark-blue);
+        font-family: SFRegular;
+    }
+    
+    #case-description{
+        font-size: 16px;
+        color: var(--dark-blue);
+        font-family: SFRegular;
+    }
+}
+
+
+
 

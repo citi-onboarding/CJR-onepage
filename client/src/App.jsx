@@ -1,5 +1,5 @@
 import {
-  PostList, CasesCard, Cases
+  CasesCard, Footer
 } from './components';
 
 
@@ -7,9 +7,8 @@ import {
 function App() {
   return (
     <>
-    <PostList />
     <CasesCard />
-    <Cases/>
+    <Footer/>
     </>
   );
 }
