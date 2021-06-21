@@ -4,4 +4,5 @@ body, html {
 
 .banner-section{
     background-color: var(--dark-blue);
+    height: 696px;
 }
