@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
 import Slider from "react-slick";
+import BudgetButton from "../../assets/Button.svg";
 // import "~slick-carousel/slick/slick.css"; 
 // import "~slick-carousel/slick/slick-theme.css";
 
@@ -19,7 +21,7 @@ function Ourservices() {
   }, []);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 900,
     slidesToShow: 4,
@@ -31,7 +33,6 @@ function Ourservices() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
         }
       },
       {
@@ -56,21 +57,25 @@ function Ourservices() {
   
   
   return (
-        <div className="services-section">      
+    <div className="services-section">
+      <div class='services-container'>
+        <div id='services-title'><h4>Nossos serviços e produtos</h4></div>
+        <div id='services-carousel'>
           <Slider {...settings}>
             {services?.map(({ _id, name, image, description }) => (
               <div key={_id} className="services-card">
-                <div>
-                <img src={image[0]?.url} alt="Exemplos de Serviços"/>
-                </div>
-                <div>
-                <p className="services-title">{name}</p>
-                <p>{description}</p>
+                <div id='carousel-images'><img src={image[0]?.url} alt="Exemplos de Serviços" /></div>
+                <div id='carousel-text'>
+                  <div class='service-name'><p>{name}</p></div>
+                  <div class='service-description'><p>{description}</p></div>
                 </div>
               </div>
-              ))}      
+            ))}
           </Slider>
         </div>
+        <div id='services-button'><a href=""><img src={BudgetButton} /></a></div>
+      </div>
+    </div>
 
   );
 }
