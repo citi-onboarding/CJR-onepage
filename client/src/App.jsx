@@ -1,10 +1,12 @@
 import {
-  PostList,
+  Navbar
 } from './components';
 
 function App() {
   return (
-    <PostList />
+    <>
+    <Navbar/>
+    </>
   );
 }
 
