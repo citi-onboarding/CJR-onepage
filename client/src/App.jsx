@@ -1,5 +1,9 @@
 import {
-  CasesCard, Footer
+  CasesCard, 
+  Footer,
+  Contacts,
+  Banner,
+  Ourservices
 } from './components';
 
 
@@ -7,7 +11,10 @@ import {
 function App() {
   return (
     <>
+    <Banner />
+    <Ourservices/>
     <CasesCard />
+    <Contacts/>
     <Footer/>
     </>
   );
