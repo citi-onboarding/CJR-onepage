@@ -31,11 +31,13 @@ function Contacts() {
                           <div class='contacts-left'>
                               <div id='left-one'><img src={DoubtContact} /></div>
                               <div id='left-two'><img src={SendDoubt} /></div>
-                              <div id='left-three'><img src={EmailContact} /></div>
-                              <div id='left-four'><img src={EmailRectangle} /></div>
-                              <div id='left-five'><img src={SendMessage} /></div>
-                              <div id='left-six'><img src={MessageRectangle} /></div>
-                              <div id='send'><img src={SendButton} /></div>
+                              <div id='inputs-contact'>
+                                  <div><label for="fname"><img src={EmailContact}/></label></div>
+                                  <div><input type="text" id="fname" name="fname"></input></div>
+                                  <div><label for="lname"><img src={SendMessage}/></label></div>
+                                  <div><input type="text" id="lname" name="lname"></input></div>
+                                  <div><input type="submit" id='sname' value="Enviar"></input></div>
+                              </div>
                           </div>
                           <div class='contacts-middle'>
                               <img src={RectangleContact} />
