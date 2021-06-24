@@ -1,8 +1,7 @@
 html, body {
-    height:100%;
     margin: 0;
     padding: 0;
-    width: 1368px;
+    width: 100%;
 }
 
   .footer-content{
@@ -13,8 +12,7 @@ html, body {
   }
 
   .container-footer{
-    max-width: 1128px;
-    width: 82vw;
+    max-width: 82vw;
     height: 235px;
     margin: auto;
     padding: 0;
