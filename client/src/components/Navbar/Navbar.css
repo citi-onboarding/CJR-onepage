@@ -1,0 +1,132 @@
+body, html {
+    margin: 0;
+}
+
+.nav-section{
+    background-color: var(--dark-blue);
+    height: 59px;
+}
+
+.container-navbar{
+    max-width: 82vw;
+    height: 59px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 8vw;
+}
+
+.nav-section ul{
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    font-family: SFRegular;
+    height: 59px;
+    width: 50vw;
+    margin-top: 0;
+}
+
+#nav-one, #nav-two, #nav-three, #nav-four{
+    color: var(--banner-white);
+    opacity: 0.7;
+    margin-top: 20px;
+}
+
+
+#nav-five{
+    color:#0C0C0E;
+    background-color: var(--green);
+    height: 39px;
+    width: 150px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+.logo-navbar{
+    width: 59px;
+    height: 59px;
+}
+
+.logo-navbar img {
+    width: 59px;
+    height: 59px;
+}
+
+
+.responsive-menu {
+    display: none;
+}
+
+@media (max-width: 375px) {
+    
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-section ul .active {
+        transform: translateX(0);
+    }
+
+    .nav-section{
+        background-color: var(--dark-blue);
+        height: 59px;
+    }
+    
+    .container-navbar{
+        max-width: 91vw;
+        height: 59px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 5vw;
+    }
+    
+    .nav-section ul{
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 59px;
+        transform: translateX(100%);
+    }
+    
+    .logo-navbar{
+        width: 59px;
+        height: 59px;
+    }
+    
+    .logo-navbar img {
+        width: 59px;
+        height: 59px;
+    }
+    
+    .menu-navbar div{
+        width: 227px;
+        height: 64px;
+    }
+    
+    .menu-navbar {
+        display: initial;
+    }
+
+    .responsive-menu {
+        display: initial;
+        height: 59px;
+        width: 60px;
+    }
+
+    .responsive-menu img{
+        margin-top: 22px;
+        margin-left: 20px;
+    }
+}
+
+
+
+
+
+
+

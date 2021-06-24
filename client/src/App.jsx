@@ -1,4 +1,5 @@
 import {
+  Navbar,
   CasesCard, 
   Footer,
   Contacts,
@@ -11,6 +12,7 @@ import {
 function App() {
   return (
     <>
+    <Navbar/>
     <Banner />
     <Ourservices/>
     <CasesCard />
