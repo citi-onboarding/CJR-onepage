@@ -1,15 +1,21 @@
 import {
-  Ourservices,
+  CasesCard, 
+  Footer,
   Contacts,
-  Banner
+  Banner,
+  Ourservices
 } from './components';
+
+
 
 function App() {
   return (
     <>
     <Banner />
-    <Ourservices />
+    <Ourservices/>
+    <CasesCard />
     <Contacts/>
+    <Footer/>
     </>
   );
 }
