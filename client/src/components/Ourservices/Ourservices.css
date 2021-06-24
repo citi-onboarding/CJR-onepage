@@ -1,0 +1,167 @@
+body, html {
+  margin: 0;
+}
+
+.services-container {
+  max-width: 82vw;
+  height: 768px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 9vw;
+}
+
+
+.services-section {
+    background-color: var(--background-white);
+    height: 768px;
+    width: 100%;
+}
+
+#carousel-images{
+  background-color: #002F67;
+  width: 64px;
+  height: 64px;
+  padding-top: 3px;
+  padding-left: 3px;
+}
+
+#carousel-images img{
+  height: 54px;
+  width: 57px;
+}
+
+#carousel-text{
+  background-color: #FFFFFF;
+  width: 258px;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-name{
+  margin-left: 16px;
+  font-size: 18px;
+  font-family: SFRegular;
+  color: #0C0C0E;
+}
+
+.service-description {
+  font-size: 18px;
+  width: 226px;
+  height: 164px;
+  margin-left: 16px;
+}
+
+#services-button {
+  width: 215px;
+  height: 48px;
+  margin-left: 32vw;
+}
+
+#services-title {
+  font-size: 48px;
+  font-family: SFRegular;
+  font-weight: 400;
+  color: #07192E;
+  margin-left: 17vw;
+}
+
+@media(max-width: 375px){
+  .services-container {
+    max-width: 91vw;
+    height: 667px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 2vw;
+  }
+
+  .services-section .slick-slider {
+    margin-left: 13vw;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  
+  .services-section {
+      background-color: var(--background-white);
+      height: 667px;
+      width: 100%;
+  }
+  
+  #carousel-images{
+    background-color: #002F67;
+    width: 64px;
+    height: 64px;
+    padding-top: 3px;
+    padding-left: 3px;
+  }
+  
+  #carousel-images img{
+    height: 54px;
+    width: 57px;
+  }
+  
+  #carousel-text{
+    background-color: #FFFFFF;
+    width: 258px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .service-name{
+    margin-left: 16px;
+    font-size: 18px;
+    font-family: SFRegular;
+    color: #0C0C0E;
+  }
+  
+  .service-description {
+    font-size: 18px;
+    width: 226px;
+    height: 164px;
+    margin-left: 16px;
+  }
+  
+  #services-button {
+    width: 215px;
+    height: 48px;
+    margin-left: 20vw;
+  }
+  
+  #services-title {
+    font-size: 30px;
+    font-family: SFRegular;
+    font-weight: 400;
+    color: #07192E;
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  /*
+  .services-section .slick-prev:before{
+    content: url('../../assets/Group 21.svg');
+  }
+  .services-section .slick-next:before{
+    content: url('../../assets/Group 20.svg');
+  }
+
+  .services-section .slick-prev{
+    left: 0px;
+  }
+  
+  .services-section .slick-next{
+    left: 258px;
+  }
+  */
+}
+
+
+
+
+

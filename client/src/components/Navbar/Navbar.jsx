@@ -22,7 +22,6 @@ function Navbar() {
                   <div class='responsive-menu'><img src={Menu}/></div>
               </div>
           </div>
-          <script src='./Navbar.js'></script>
     </>
   );
 }
