@@ -90,7 +90,7 @@ body, html {
 
 .seal-contact {
     position: absolute;
-    top: 2630px;
+    margin-top: 203px;
     right: 8vw;
 }
 
@@ -208,11 +208,11 @@ body, html {
     }
     
     .seal-contact img{
-        position: relative;
-        bottom: 50px;
-        right: 0;
-        height: 133px;
-        width: 128px;
+        position: absolute;
+        margin-top: 171px;
+        right: 3vw;
+        height: 110px;
+        width: 110px;
     }
 
     #fname {
