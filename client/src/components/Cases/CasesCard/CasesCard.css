@@ -138,7 +138,7 @@ html, body {
   width: 430px;
 }
 
-@media (max-width: 900){
+@media (max-width: 900px){
   .case-section {  
     height: 667px;
     width: 100vw;
