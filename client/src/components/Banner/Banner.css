@@ -56,7 +56,7 @@ body, html {
     height: 16px;
 }
 
-@media (max-width: 375px){
+@media (max-width: 900px){
 
     .banner-section{
         background-color: var(--dark-blue);
