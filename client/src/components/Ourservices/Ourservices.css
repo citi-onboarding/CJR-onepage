@@ -2,20 +2,17 @@ body, html {
   margin: 0;
 }
 
-.services-container {
-  max-width: 82vw;
-  height: 768px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin-left: 9vw;
+.services-background{
+  background-color: var(--background-white);
 }
-
 
 .services-section {
     background-color: var(--background-white);
     height: 768px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 #carousel-images{
@@ -37,7 +34,7 @@ body, html {
   height: 290px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .service-name{
@@ -69,14 +66,6 @@ body, html {
 }
 
 @media(max-width: 375px){
-  .services-container {
-    max-width: 91vw;
-    height: 667px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-left: 2vw;
-  }
 
   .services-section .slick-slider {
     margin-left: 13vw;
@@ -89,6 +78,9 @@ body, html {
       background-color: var(--background-white);
       height: 667px;
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
   }
   
   #carousel-images{

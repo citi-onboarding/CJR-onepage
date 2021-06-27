@@ -5,6 +5,8 @@ body, html {
 .banner-section{
     background-color: var(--dark-blue);
     height: 696px;
+    display: flex;
+    flex-direction: column;
 }
 
 #squares {
@@ -20,23 +22,22 @@ body, html {
     width: 594px;
 }
 
-.banner-container{
-    display: flex;
-    flex-direction: column;
-    max-width: 82vw;
-    margin-left: 8vw;
-    height: 680px;
+.banner-background{
+    background-color: var(--dark-blue);
 }
 
 .banner-up{
-    margin-top: 54px;
+    margin-top: 66px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
+.banner-text{
+    padding: 0;
+}
+
 .banner-text h1{
-    width: 625px;
     margin-top: 182px;
     color: var(--banner-white);
     font-family: SFMedium;
@@ -61,6 +62,12 @@ body, html {
     .banner-section{
         background-color: var(--dark-blue);
         height: 573px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .banner-background{
         overflow: hidden;
     }
     
@@ -77,15 +84,6 @@ body, html {
     
     .banner-image{
         display: none;
-    }
-    
-    .banner-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        max-width: 91vw;
-        height: 277px;
-        margin-right: 8vw;
     }
     
     .banner-up{

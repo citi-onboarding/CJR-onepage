@@ -108,7 +108,7 @@ body, html {
     .contacts-section {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
         background-color: var(--background-white);
         height: 667px;
         padding-top: 48px;
@@ -151,7 +151,7 @@ body, html {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        height: 121px;
+        height: 150px;
     }
 
     #contact-one img {
@@ -164,7 +164,6 @@ body, html {
     }
 
     #contact-two img {
-        width: 64vw;
         height: 34px;
     }
 
@@ -173,8 +172,8 @@ body, html {
         height: 19px;
     }
 
+
     #left-two img {
-        width: 331px;
         height: 34px;
     }
 
@@ -209,7 +208,7 @@ body, html {
     
     .seal-contact img{
         position: absolute;
-        margin-top: 171px;
+        margin-top: 215px;
         right: 3vw;
         height: 110px;
         width: 110px;
