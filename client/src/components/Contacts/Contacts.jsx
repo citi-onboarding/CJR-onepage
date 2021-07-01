@@ -46,7 +46,7 @@ function Contacts() {
                               <div class='right-up-contacts'>
                               <div id='contact-one'><img src={Idea} /></div>
                               <div id='contact-two'><img src={MakeBudget} /></div>
-                              <div id='contact-three'><img src={BudgetContact} /></div>
+                              <a href="https://contatocjr.typeform.com/to/WyhLH3?typeform-embed=embed-fullpage"><div id='contact-three'><img src={BudgetContact} /></div></a>
                               </div>
                               <div class='seal-contact'><img src={ShapeContact} /></div>
                           </div>

@@ -29,8 +29,9 @@ function CasesCard() {
 
   return (
     <>
+      <div class='cases-background'>
+      <div class='container'>
       <div className="case-section">
-        <div class='container-cases'>
           <div class='case-left'>
             <Cases />
           </div>
@@ -45,7 +46,8 @@ function CasesCard() {
               ))}
             </Slider>
           </div>
-        </div>
+      </div>
+      </div>
       </div>
     </>
   );

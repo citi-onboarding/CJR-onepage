@@ -24,7 +24,7 @@ body, html {
     font-family: SFRegular;
 }
 
-@media (max-width: 375px){
+@media (max-width: 900px){
     .casetext{
         width: 335px;
         height: 101px;

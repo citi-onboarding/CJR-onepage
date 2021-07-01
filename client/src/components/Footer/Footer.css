@@ -11,12 +11,10 @@ html, body {
       bottom:0;
   }
 
-  .container-footer{
-    max-width: 82vw;
-    height: 235px;
-    margin: auto;
-    padding: 0;
+  .footer-background {
+      background-color: var(--dark-blue);
   }
+
 
   .nameadress, .contact {
     font-size: 14px;
@@ -88,7 +86,7 @@ html, body {
       width: 100vw;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 900px) {
 
     .footer-content{
         background-color: var(--dark-blue);

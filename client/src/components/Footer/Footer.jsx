@@ -10,8 +10,9 @@ function Footer() {
 
   return (
     <>
+          <div class='footer-background'>
+          <div class='container'>
           <div class='footer-content'>
-              <div class='container-footer'>
                   <div class='text'>
                       <div>
                           <p class='nameadress'>ENDEREÇO</p>
@@ -29,8 +30,9 @@ function Footer() {
                       <div><a href="https://www.linkedin.com/company/cjr-unb/"><img src={LinkedinLogo}/></a></div>
                       <div><a href="https://www.facebook.com/unb.cjr/"><img src={FacebookLogo}/></a></div>
                   </div>
-              </div>
-              <div id='rectangle'><img src={Rectangle}/></div>
+          </div>
+          </div>
+          <div id='rectangle'><img src={Rectangle}/></div>
           </div>
     </>
   );

@@ -11,17 +11,13 @@ html, body {
   height: 511px;
   width: 100%;
   background-color: var(--background-white);
-}
-
-.container-cases{
-  max-width: 82vw;
-  width: 100%;
-  height: 511px;
-  margin: auto;
-  padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.cases-background {
+  background-color: var(--background-white);
 }
 
 
@@ -138,23 +134,16 @@ html, body {
   width: 430px;
 }
 
-@media (max-width: 375px){
+@media (max-width: 900px){
   .case-section {  
     height: 667px;
     width: 100vw;
     background-color: var(--background-white);
-  }
-
-  .container-cases{
-    max-width: 332px;
-    width: 91vw;
-    height: 667px;
-    margin: auto;
-    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+
 
   .case-section .slick-slider {
     width: 400px;

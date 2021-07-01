@@ -57,8 +57,9 @@ function Ourservices() {
   
   
   return (
+    <div class='services-background'>
+    <div class='container'>
     <div className="services-section">
-      <div class='services-container'>
         <div id='services-title'><h4>Nossos serviços e produtos</h4></div>
         <div id='services-carousel'>
           <Slider {...settings}>
@@ -73,8 +74,9 @@ function Ourservices() {
             ))}
           </Slider>
         </div>
-        <div id='services-button'><a href=""><img src={BudgetButton} /></a></div>
-      </div>
+        <div id='services-button'><a href="https://contatocjr.typeform.com/to/WyhLH3?typeform-embed=embed-fullpage"><img src={BudgetButton} /></a></div>
+    </div>
+    </div>
     </div>
 
   );

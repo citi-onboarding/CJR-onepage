@@ -19,8 +19,9 @@ function Banner() {
 
   return (
     <>
+          <div class='banner-background'>
+          <div class='container'>
           <div className="banner-section">
-              <div class='banner-container'>
                   <div class='banner-up'>
                       <div class='banner-text'>
                           {banner?.map(({ name, description }) => (
@@ -34,9 +35,10 @@ function Banner() {
                           <img id='squares' src={GreenShape} />
                       </div>
                   </div>
-              </div>
               <img id='small-squares' src={SmallShape}/>
-              <div class='banner-down'></div>
+          </div>
+          </div>
+          <div class='banner-down'></div>
           </div>
     </>
   );
