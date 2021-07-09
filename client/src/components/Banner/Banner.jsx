@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import GreenShape from '../../assets/shape.svg';
 import SmallShape from '../../assets/small-shape.png';
+import api from '../../services/api';
 
 import './Banner.css';
 
@@ -9,7 +9,7 @@ function Banner() {
   const [banner, setBanner] = useState([]);
 
   const loadBanner = async () => {
-    const res = await axios.get('http://localhost:3001/api/banner');
+    const res = await api.get('banner');
     setBanner(res.data);
   };
 

@@ -3,6 +3,8 @@ import React from 'react';
 import axios from 'axios';
 import Slider from "react-slick";
 import BudgetButton from "../../assets/Button.svg";
+import api from '../../services/api';
+
 // import "~slick-carousel/slick/slick.css"; 
 // import "~slick-carousel/slick/slick-theme.css";
 
@@ -12,7 +14,7 @@ function Ourservices() {
   const [services, setServices] = useState([]);
 
   const loadServices = async () => {
-    const res = await axios.get('http://localhost:3001/api/Ourservices');
+    const res = await api.get('Ourservices');
     setServices(res.data);
   };
 

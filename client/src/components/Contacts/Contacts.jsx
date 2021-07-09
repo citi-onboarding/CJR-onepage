@@ -1,16 +1,11 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
 import ContactsTitle from '../../assets/contact-title.svg';
 import RectangleContact from '../../assets/rectangle-contact.svg';
 import ShapeContact from '../../assets/foca.svg';
 import DoubtContact from '../../assets/doubt-contact.svg';
 import SendDoubt from '../../assets/send-doubt.svg';
 import EmailContact from '../../assets/Email.svg';
-import EmailRectangle from '../../assets/email-rectangle.svg';
 import SendMessage from '../../assets/write-message.svg';
-import MessageRectangle from '../../assets/message-rectangle.svg';
-import SendButton from '../../assets/enviar-button.svg';
 import Idea from '../../assets/idea.svg';
 import MakeBudget from '../../assets/make-budget.svg';
 import BudgetContact from '../../assets/budget-contact.svg';
