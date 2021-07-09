@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import api from '../../../services/api';
 
 import Cases from '../Cases.jsx';
 import './CasesCard.css';
@@ -11,7 +11,7 @@ function CasesCard() {
   const [casesCard, setCasesCard] = useState([]);
 
   const loadCasesCard = async () => {
-    const res = await axios.get('http://localhost:3001/api/cases');
+    const res = await api.get('cases');
     setCasesCard(res.data);
   };
 

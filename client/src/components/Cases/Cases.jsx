@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../../services/api';
 
 import './Cases.css';
 
@@ -7,7 +7,7 @@ function Cases() {
   const [cases, setCases] = useState([]);
 
   const loadCases = async () => {
-    const res = await axios.get('http://localhost:3001/api/casedescription');
+    const res = await api.get('casedescription');
     setCases(res.data);
   };
 
