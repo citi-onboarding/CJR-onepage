@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import GreenShape from '../../assets/shape.svg';
 import SmallShape from '../../assets/small-shape.png';
+import api from '../../services/api';
 
 import './Banner.css';
 
@@ -9,7 +9,7 @@ function Banner() {
   const [banner, setBanner] = useState([]);
 
   const loadBanner = async () => {
-    const res = await axios.get('http://localhost:3001/api/banner');
+    const res = await api.get('banner');
     setBanner(res.data);
   };
 
@@ -19,8 +19,9 @@ function Banner() {
 
   return (
     <>
+          <div class='banner-background'>
+          <div class='container'>
           <div className="banner-section">
-              <div class='banner-container'>
                   <div class='banner-up'>
                       <div class='banner-text'>
                           {banner?.map(({ name, description }) => (
@@ -34,9 +35,10 @@ function Banner() {
                           <img id='squares' src={GreenShape} />
                       </div>
                   </div>
-              </div>
               <img id='small-squares' src={SmallShape}/>
-              <div class='banner-down'></div>
+          </div>
+          </div>
+          <div class='banner-down'></div>
           </div>
     </>
   );

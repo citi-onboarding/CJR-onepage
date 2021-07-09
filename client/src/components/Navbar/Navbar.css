@@ -60,15 +60,9 @@ body, html {
     display: none;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 900px) {
     
-    body {
-        overflow-x: hidden;
-    }
 
-    .nav-section ul .active {
-        transform: translateX(0);
-    }
 
     .nav-section{
         background-color: var(--dark-blue);
@@ -85,12 +79,7 @@ body, html {
     }
     
     .nav-section ul{
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        right: 0;
-        top: 59px;
-        transform: translateX(100%);
+        display: none;
     }
     
     .logo-navbar{
