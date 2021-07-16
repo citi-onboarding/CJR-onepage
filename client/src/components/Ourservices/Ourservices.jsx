@@ -5,10 +5,11 @@ import Slider from "react-slick";
 import BudgetButton from "../../assets/Button.svg";
 import api from '../../services/api';
 
-// import "~slick-carousel/slick/slick.css"; 
-// import "~slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 import './Ourservices.css';
+import Button from '../Button/Button';
 
 function Ourservices() {
   const [services, setServices] = useState([]);
@@ -30,7 +31,7 @@ function Ourservices() {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1280,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -38,14 +39,14 @@ function Ourservices() {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 980,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2
         }
       },
       {
-        breakpoint: 375,
+        breakpoint: 650,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -59,24 +60,29 @@ function Ourservices() {
   
   
   return (
-    <div class='services-background'>
+    <div class='services-background' id="Serviços">
     <div class='container'>
     <div className="services-section">
-        <div id='services-title'><h4>Nossos serviços e produtos</h4></div>
+        <div id='services-title'>Nossos serviços e produtos</div>
         <div id='services-carousel'>
           <Slider {...settings}>
             {services?.map(({ _id, name, image, description }) => (
               <div key={_id} className="services-card">
-                <div id='carousel-images'><img src={image[0]?.url} alt="Exemplos de Serviços" /></div>
+                               
                 <div id='carousel-text'>
                   <div class='service-name'><p>{name}</p></div>
                   <div class='service-description'><p>{description}</p></div>
                 </div>
+                <div id='carousel-images'>
+                  <img src={image[0]?.url} alt="Exemplos de Serviços" />
+                </div> 
               </div>
             ))}
           </Slider>
         </div>
-        <div id='services-button'><a href="https://contatocjr.typeform.com/to/WyhLH3?typeform-embed=embed-fullpage"><img src={BudgetButton} /></a></div>
+        <div id='services-button'>
+          <Button />
+        </div>
     </div>
     </div>
     </div>
