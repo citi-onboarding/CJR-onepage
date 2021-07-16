@@ -15,9 +15,9 @@ function Navbar() {
                   <ul class='navbar-list'>
                       <li id='nav-one'>Início</li>
                       <li id='nav-two'>Quem Somos</li>
-                      <li id='nav-three'>Serviços e Produtos</li>
-                      <li id='nav-four'>Cases</li>
-                      <li id='nav-five'>Contato</li>
+                      <li id='nav-three'><a href='#Serviços'>Serviços e Produtos</a></li>
+                      <li id='nav-four'><a href='#Cases'>Cases</a></li>
+                      <li id='nav-five'><a href='#Contato'>Contato</a></li>
                   </ul>
                   <div class='responsive-menu'><img src={Menu}/></div>
               </div>
