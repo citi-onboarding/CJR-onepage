@@ -6,7 +6,6 @@ body, html {
     width: 404px;
     height: 140px;
     position: relative;
-    margin-top: 176px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

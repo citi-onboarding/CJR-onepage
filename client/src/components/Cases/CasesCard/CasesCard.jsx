@@ -27,9 +27,8 @@ function CasesCard() {
     slidesToScroll: 1
   };
 
-  return (
-    <>
-      <div class='cases-background'>
+  return (    
+      <div class='cases-background' id='Cases'>
       <div class='container'>
       <div className="case-section">
           <div class='case-left'>
@@ -38,18 +37,17 @@ function CasesCard() {
           <div class='case-right'>
             <Slider {...settings}>
               {casesCard?.map(({ _id, title, image, description }) => (
-                <div key={_id} className="cases-card">
+                <div key={_id} className="cases-card">                                   
                   <img id='card-image' src={image[0]?.url} alt="Case de Exemplo" />
                   <p id="case-card-title">{title}</p>
-                  <p id="case-card-description">{description}</p>
+                  <p id="case-card-description">{description}</p> 
                 </div>
               ))}
             </Slider>
           </div>
       </div>
       </div>
-      </div>
-    </>
+      </div>    
   );
 }
 
