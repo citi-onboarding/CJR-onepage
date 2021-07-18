@@ -4,61 +4,107 @@ body, html {
 
 .contact-background {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: var(--background-white);
 }
 
 #contacts-section {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    background-color: var(--background-white);
-    height: 768px;
-    padding-top: 112px;
-}
-
-.contacts-up {
-    padding-left: 20vw;
-}
-
-.contacts-down {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
 }
 
-.contacts-left {
+.contacts-title {
+    font-family: SFRegular;
+    font-size: 48px;
+    color: var(--dark-blue);
+    padding-top: 70px;
+}
+
+.contacts-body {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-family: SFRegular;
+    margin-bottom: 5vh;
+    height: 65vh;
+}
+
+.contacts-doubt-section {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    color: var(--dark-blue);
+    width: 40vw;
+}
+
+#doubt-info {
+    height: 25%;
 }
 
 #inputs-contact {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 250px;
+    height: 70%;
+    width: 100%;
+    align-items: center;
+    text-align: start;
 }
 
-#fname {
-    width: 483px;
-    height: 6vh;
+.email-input-container {
+    width: 100%;
+}
+
+.message-input-container {
+    width: 100%;
+    height: 60%;
+}
+
+.contacts-diviser {
+    margin: 0 80px 0;
+    height: 100%;
+    width: 2px;
+    background-color: #E5E5E5;
+}
+
+#inputs-contact label {
+    width: 100%;
+    text-align: start;
+    font-size: 16px;
+}
+
+#secondary-title-contact {
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+#email-input {
+    width: 100%;
+    height: 50px;
     border: 1px solid #07192E;
     box-sizing: border-box;
     border-radius: 2px;
-    background-color: var(--background-white);
-}
-
-#lname {
-    width: 483px;
-    height: 17vh;
-    border: 1px solid #07192E;
     box-sizing: border-box;
-    border-radius: 2px;
-    background-color: var(--background-white);
+    padding: 0 5px 0;  
+    background-color: transparent; 
 }
 
-#sname {
+#message-input {
+    width: 100%;
+    height: 80%;
+    border: 1px solid #07192E;
+    border-radius: 2px;
+    box-sizing: border-box;
+    background-color: transparent; 
+    padding: 5px;  
+    resize: none;
+}
+
+#button-contact {
     width: 9vw;
     height: 5vh;
     border: 1px solid #07192E;
@@ -67,18 +113,20 @@ body, html {
     background-color: var(--background-white);
     font-family: SFRegular;
     color: var(--dark-blue);
-    margin-left: 12vw;
+    cursor: pointer;
 }
 
-.contacts-middle {
-    height: 414px;
+#button-contact:hover {
+    border: 1px solid #1f65b6;
+    color: #1f65b6;
+    ;
 }
 
-.contacts-right {
+.contacts-budget-section {
     display: flex;
     flex-direction: column;
+    width: 40vw;
     justify-content: space-between;
-    margin-right: 11vw;
 }
 
 .right-up-contacts {
@@ -94,18 +142,18 @@ body, html {
     right: 8vw;
 }
 
-#send{
-    margin-left: 13vw;
+#body-contact {
+    font-size: 18px;
+    margin-top: 5px;
 }
 
-@media (max-width: 900px){
-    .contact-background {
-        width: 100%;
-        height: 100%;
-        background-color: var(--background-white);
+@media (max-width: 1025px){
+    .contacts-title {
+        font-size: 30px;
+        text-align: center;
     }
     
-    #contacts-section {
+    .contacts-section {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -114,133 +162,75 @@ body, html {
         padding-top: 48px;
         padding-right: 5vw;
     }
+
+    #secondary-title-contact {
+        font-size: 16px;
+    }
     
-    .contacts-up {
-        padding-left: 8vw;
+    #body-contact {
+        font-size: 14px;
     }
 
-    .contacts-up img{
-        width: 250px;
-        height: 72px;
+    #inputs-contact label {
+        font-size: 12px;
     }
-    
-    .contacts-down {
+
+    .contacts-body {
         display: flex;
         flex-direction: column-reverse;
         justify-content: space-between;
+        align-items: center;
     }
     
-    .contacts-left {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+    .contacts-doubt-section {
+        width: 100%;
     }
     
-    .contacts-middle {
+    .contacts-diviser {
         display: none;
     }
     
-    .contacts-right {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-right: 11vw;
+    .contacts-budget-section {
+        justify-content: flex-start;
+        width: 100%;
     }
     
-    .right-up-contacts {
+
+    #budget-button {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 150px;
-    }
-
-    #contact-one img {
-        width: 59vw;
-        height: 19px;
-    }
-
-    #contact-three {
-        margin-left: 15vw;
-    }
-
-    #contact-two img {
-        height: 34px;
-    }
-
-    #left-one img {
-        width: 204px;
-        height: 19px;
-    }
-
-
-    #left-two img {
-        height: 34px;
-    }
-
-    #left-three img {
-        width: 31px;
-        height: 14px;
-    }
-
-    #left-four img {
-        width: 80vw;
-        height: 40px;
-    }
-
-    #left-five img {
-        width: 133px;
-        height: 14px;
-    }
-
-    #left-six img {
-        width: 80vw;
-        height: 91px;
-    }
-
-    #left-seven {
-        margin-left: 30vw;
-    }
-
-    #left-seven img {
-        width: 125px;
-        height: 35px;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
     }
     
     .seal-contact img{
+        display: none;
         position: absolute;
         margin-top: 215px;
-        right: 3vw;
+        right: 3px;
         height: 110px;
         width: 110px;
     }
 
-    #fname {
-        width: 325px;
+    #email-input {
+        width: 100%;
         height: 40px;
         border: 1px solid #07192E;
         box-sizing: border-box;
         border-radius: 2px;
-        background-color: var(--background-white);
     }
     
-    #lname {
-        width: 325px;
+    #message-input {
+        width: 100%;
         height: 91px;
         border: 1px solid #07192E;
         box-sizing: border-box;
         border-radius: 2px;
-        background-color: var(--background-white);
     }
     
-    #sname {
+    #button-contact {
         width: 125px;
         height: 5vh;
-        border: 1px solid #07192E;
-        box-sizing: border-box;
-        border-radius: 2px;
-        background-color: var(--background-white);
-        font-family: SFRegular;
-        color: var(--dark-blue);
-        margin-left: 12vw;
+        margin-bottom: 20px;
     }
 }

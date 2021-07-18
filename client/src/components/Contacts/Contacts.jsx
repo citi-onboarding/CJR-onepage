@@ -1,49 +1,48 @@
 import React from 'react';
-import ContactsTitle from '../../assets/contact-title.svg';
-import RectangleContact from '../../assets/rectangle-contact.svg';
 import ShapeContact from '../../assets/foca.svg';
-import DoubtContact from '../../assets/doubt-contact.svg';
-import SendDoubt from '../../assets/send-doubt.svg';
-import EmailContact from '../../assets/Email.svg';
-import SendMessage from '../../assets/write-message.svg';
-import Idea from '../../assets/idea.svg';
-import MakeBudget from '../../assets/make-budget.svg';
-import BudgetContact from '../../assets/budget-contact.svg';
 
 import './Contacts.css';
+import Button from '../Button/Button';
 
 function Contacts() {
   
   return (
     <>
-          <div class='contact-background'>
+          <div class='contact-background' id='Contato'>
               <div class='container'>
-                  <div id='contacts-section'>
-                      <div class='contacts-up'>
-                          <img src={ContactsTitle} />
+                  <div class='contacts-section'>
+                      <div class='contacts-title'>
+                          Como podemos te ajudar?
                       </div>
-                      <div class='contacts-down'>
-                          <div class='contacts-left'>
-                              <div id='left-one'><img src={DoubtContact} /></div>
-                              <div id='left-two'><img src={SendDoubt} /></div>
+                      <div class='contacts-body'>
+                          <div class='contacts-doubt-section'>
+                              <div id="doubt-info">
+                                <div id='secondary-title-contact'>Ainda tem alguma dúvida?</div>
+                                <div id='body-contact'>Envie sua dúvida e nossa equipe entrará em contato o mais rápido possível</div>
+                              </div>
                               <div id='inputs-contact'>
-                                  <div><label for="fname"><img src={EmailContact}/></label></div>
-                                  <div><input type="text" id="fname" name="fname"></input></div>
-                                  <div><label for="lname"><img src={SendMessage}/></label></div>
-                                  <div><input type="text" id="lname" name="lname"></input></div>
-                                  <div><input type="submit" id='sname' value="Enviar"></input></div>
+                                  <div class='email-input-container'>
+                                    <label id="email-label" for="email-input">Email</label>
+                                    <input id="email-input" name="email-input"/>
+                                  </div>
+                                  <div class='message-input-container'>
+                                    <label id="message-label">Escreva sua mensagem</label>
+                                    <textarea id="message-input" />
+                                  </div>
+                                  <button type="submit" id='button-contact' value="Enviar">Enviar</button>
                               </div>
                           </div>
-                          <div class='contacts-middle'>
-                              <img src={RectangleContact} />
-                          </div>
-                          <div class='contacts-right'>
+                          <div class='contacts-diviser'/>
+                              
+                          <div class='contacts-budget-section'>
                               <div class='right-up-contacts'>
-                              <div id='contact-one'><img src={Idea} /></div>
-                              <div id='contact-two'><img src={MakeBudget} /></div>
-                              <a href="https://contatocjr.typeform.com/to/WyhLH3?typeform-embed=embed-fullpage"><div id='contact-three'><img src={BudgetContact} /></div></a>
+                              <div id='secondary-title-contact'>Já tem uma ideia de projeto?</div>
+                              <div id='body-contact'>Faça um orçamento e tire seu projeto do papel!</div>
+                                  <div id='budget-button'>
+                                    <Button />
+                                  </div>
                               </div>
-                              <div class='seal-contact'><img src={ShapeContact} /></div>
+                              <div class='seal-contact'><img src={ShapeContact} alt='foca'/></div>
                           </div>
                       </div>
                   </div>

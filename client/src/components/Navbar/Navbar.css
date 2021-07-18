@@ -5,6 +5,9 @@ body, html {
 .nav-section{
     background-color: var(--dark-blue);
     height: 59px;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
 }
 
 .navbar-link{
@@ -29,17 +32,29 @@ body, html {
     height: 59px;
     width: 50vw;
     margin-top: 0;
+    
+}
+ 
+#nav-one a, #nav-two a, #nav-three a, #nav-four a{
+    text-decoration: none;
+    color: var(--banner-white);
+}
+
+#nav-five a{
+    text-decoration: none;
+    color: #07192E;
 }
 
 #nav-one, #nav-two, #nav-three, #nav-four{
     color: var(--banner-white);
     opacity: 0.7;
     margin-top: 20px;
+    text-decoration: none;
 }
 
 
 #nav-five{
-    color:#0C0C0E;
+    color: #07192E;
     background-color: var(--green);
     height: 39px;
     width: 150px;

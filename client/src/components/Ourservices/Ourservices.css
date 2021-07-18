@@ -2,18 +2,27 @@ body, html {
   margin: 0;
 }
 
+.services-card {
+  display: flex !important;
+  flex-direction: column;
+  padding-left: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 5px;
+  height: 320px;
+}
+
 .services-background{
   background-color: var(--background-white);
 }
 
 .services-section {
-    background-color: var(--background-white);
-    height: 768px;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-}
+    justify-content: space-between;
+  }
 
 #carousel-images{
   background-color: #002F67;
@@ -21,6 +30,9 @@ body, html {
   height: 64px;
   padding-top: 3px;
   padding-left: 3px;
+  margin-left: -156px;
+  margin-top: -314px;
+  border-radius: 2px;
 }
 
 #carousel-images img{
@@ -34,10 +46,14 @@ body, html {
   height: 290px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
+  box-shadow: 0px 2px 0px #EBEBEB;
+  border-radius: 2px;
+  margin-top: 30px;
 }
 
 .service-name{
+  margin-top: 64px;
   margin-left: 16px;
   font-size: 18px;
   font-family: SFRegular;
@@ -48,27 +64,31 @@ body, html {
   font-size: 18px;
   width: 226px;
   height: 164px;
-  margin-left: 16px;
+  margin: 24px 16px 0;
+  color: #383D43;
 }
 
 #services-button {
   width: 215px;
   height: 48px;
-  margin-left: 32vw;
+  margin-top: 35px;
+  margin-bottom: 40px;
+  align-self: center;
 }
 
 #services-title {
-  font-size: 48px;
+  width: 100%;
+  text-align: center;
   font-family: SFRegular;
-  font-weight: 400;
+  font-size: 48px;
   color: #07192E;
-  margin-left: 17vw;
+  margin-top: 70px;
 }
 
 @media(max-width: 375px){
 
   .services-section .slick-slider {
-    margin-left: 13vw;
+    align-self: center;
     justify-content: center;
     align-content: center;
   }
@@ -122,15 +142,13 @@ body, html {
   #services-button {
     width: 215px;
     height: 48px;
-    margin-left: 20vw;
   }
   
   #services-title {
     font-size: 30px;
     font-family: SFRegular;
-    font-weight: 400;
+    font-weight: lighter;
     color: #07192E;
-    margin-left: 0;
     text-align: center;
     width: 100%;
   }
