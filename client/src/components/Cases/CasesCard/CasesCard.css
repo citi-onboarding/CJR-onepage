@@ -8,18 +8,25 @@ html, body {
 }
 
 .case-section {  
-  height: 511px;
   width: 100%;
+  height: 100vh;
   background-color: var(--background-white);
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
+  align-items: center;
+  align-content: center;
 }
 
 .cases-background {
+  padding-top: 30px;
   background-color: var(--background-white);
+  width: 100%;
+  height: 100vh;
 }
 
+.image-box {
+  position: relative;
+}
 
 .case-section .slick-slider {
   width: 550px;
@@ -34,7 +41,7 @@ html, body {
   width: 472px;
 }
 
-#card-image {
+#card-image {  
   width: 472px;
   height: 305px;
   mask-image: linear-gradient(to top, rgba(0, 51, 102, 0) 0%, #003366 82.13%);
@@ -106,23 +113,28 @@ html, body {
 }
 
 .cases-card{
-  background-color: #003366;
+  background-color: #003366;  
 }
 
 #case-card-title {
+  position: absolute;
+  top: 230px;
+  margin-left: 25px;
   font-family: SFRegular;
-  font-size: 300px;
-  color: red;
+  font-size: 18px;
+  color: #FFFFFF;
 }
 
 #case-card-description {
+  position: absolute;
+  top: 260px;
+  margin-left: 25px;
   font-family: SFRegular;
-  font-size: 300px;
-  color: red;
+  font-size: 14px;
+  color: #FFFFFF;
 }
 
 .case-right{
-  margin-top: 97px;
   height: 327px;
   width: 620px;
   display: flex;
@@ -131,60 +143,78 @@ html, body {
 }
 
 .case-left{
+  display: flex;
+  align-items: center;
   width: 430px;
 }
 
-@media (max-width: 900px){
+@media (max-width: 1025px){
   .case-section {  
-    height: 667px;
-    width: 100vw;
-    background-color: var(--background-white);
+    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
   }
 
-
   .case-section .slick-slider {
-    width: 400px;
-    height: 370px;
+    margin-top: 5vh;
+    width: 80vw;
+    height: 60vh;
     display: flex;
     flex-direction: row;
-    justify-content: center;
   }
   
   .case-section .slick-list {
-    height: 370px;
-    width: 311px;
+    height: 100%;
+    width: 80vw;
   }
   
   #card-image {
-    width: 472px;
-    height: 370px;
+    width: 100%;
+    height: 60vh;
     mask-image: linear-gradient(to top, rgba(0, 51, 102, 0) 0%, #003366 82.13%);
   }
 
   .case-section .slick-prev{
     width: 30px;
     height: 30px;
+    z-index: 100;
   }
-  
+ 
+  .case-section .slick-next::before{
+    margin-left: -50px;
+  }
+
+  .case-section .slick-prev::before{
+    margin-right: -50px;
+  }
+
   .case-section .slick-next{
     width: 30px;
     height: 30px;
   }
 
   .case-right{
-    height: 394px;
-    width: 349px;
+    height: 75vh;
+    width: 80vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
   
   .case-left{
-    width: 335px;
-    height: 101px;
+    margin-top: 100px;
+    justify-content: center;
+    text-align: center;
+    width: 80vw;
   }
+}
+
+@media (max-width: 1020px){
+  .case-left{
+    margin-top: 20px;
+  }
+
 }
 

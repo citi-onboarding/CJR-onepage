@@ -1,0 +1,34 @@
+#button-component {
+  display: flex;
+  align-items: center;
+  background-color: #73C04A;
+  border: none;
+  padding: 15px;
+  font-family: SFRegular;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 2px;
+}
+
+#button-component img {
+  margin-left: 10px;
+}
+
+#button-component:hover{
+  background-color: #94df6c;
+}
+
+#button-component a {
+  text-decoration: none;
+  color: #07192E;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1025px){
+  #button-component {
+    font-size: 16px;
+  }
+}
+
