@@ -29,7 +29,7 @@ function CasesCard() {
 
   return (
     <>
-      <div class='cases-background'>
+      <div id='cases-background'>
       <div class='container'>
       <div className="case-section">
           <div class='case-left'>

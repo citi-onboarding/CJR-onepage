@@ -8,7 +8,7 @@ body, html {
     background-color: var(--background-white);
 }
 
-.contacts-section {
+#contacts-section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -105,7 +105,7 @@ body, html {
         background-color: var(--background-white);
     }
     
-    .contacts-section {
+    #contacts-section {
         display: flex;
         flex-direction: column;
         justify-content: center;

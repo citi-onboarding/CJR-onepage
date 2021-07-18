@@ -18,7 +18,7 @@ function Contacts() {
     <>
           <div class='contact-background'>
               <div class='container'>
-                  <div class='contacts-section'>
+                  <div id='contacts-section'>
                       <div class='contacts-up'>
                           <img src={ContactsTitle} />
                       </div>

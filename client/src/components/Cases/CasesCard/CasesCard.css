@@ -16,7 +16,7 @@ html, body {
   justify-content: space-around;
 }
 
-.cases-background {
+#cases-background {
   background-color: var(--background-white);
 }
 
