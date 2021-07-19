@@ -7,11 +7,11 @@ import './Navbar.css';
 
 
 function Navbar() {
-  const [navbarOpened, setNavbarOpened] = useState(false);
+  const [navbarClosed, setNavbarClosed] = useState(true);
 
   const openMenu = () =>{
-    setNavbarOpened(!navbarOpened)
-    if (navbarOpened){
+    setNavbarClosed(!navbarClosed)
+    if (!navbarClosed){
       document.body.style.overflow = 'auto';
     } else {
       document.body.style.overflow = 'hidden';
@@ -32,7 +32,7 @@ function Navbar() {
                       <a href='#Contato' class='navbar-link'><li id='nav-five'>Contato</li></a>
                   </ul>
                   <div class='responsive-menu'>
-                    <div class='navbar-mobile'className={navbarOpened ? 'navbar-open' : 'navbar-close'}>
+                    <div class='navbar-mobile'className={navbarClosed ? 'navbar-open' : 'navbar-close'}>
                       <img class='close-menu' src={Close} onClick ={()=> openMenu()}/>
                       <ul class='navbar-list-mobile'>
                         <a href='#Início' class='navbar-link-mobile' onClick ={()=> openMenu()}><li id='nav-one'>Início</li></a>
