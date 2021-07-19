@@ -19,18 +19,16 @@ function Banner() {
 
   return (
     <>
-          <div class='banner-background'>
+          <div class='banner-background' id='Início'>
           <div class='container'>
           <div className="banner-section">
               <div class='banner-something'>
                   <div class='banner-up'>
                       <div class='banner-text'>
-                          {banner?.map(({ name, description }) => (
-                              <>
-                                  <h1>{name}</h1>
-                                  <p>{description}</p>
-                              </>
-                          ))}
+                        <>
+                            <h1>{banner[0]?.name}</h1>
+                            <p>{banner[0]?.description}</p>
+                        </>
                       </div>
                   </div>
                   <div class='banner-image'>
@@ -40,7 +38,7 @@ function Banner() {
               <img id='small-squares' src={SmallShape}/>
           </div>
           </div>
-          <div class='banner-down'></div>
+          <div class='banner-down' id='bottom-banner'></div>
           </div>
     </>
   );

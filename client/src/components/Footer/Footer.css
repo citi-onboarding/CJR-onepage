@@ -118,7 +118,7 @@ font-family: SFRegular;
 
     .container-footer{
         max-width: 332px;
-        width: 91vw;
+        width: 100%;
         height: 424px;
         margin: auto;
         padding: 0;
@@ -136,12 +136,12 @@ font-family: SFRegular;
     
       .adress {
           color: var(--light-grey);
-          width: 270px;
+          width: 100%;
       }
     
       .email {
           color: var(--light-grey);
-          width: 158px;
+          width: 100%;
       }
     
       .developed {
@@ -156,6 +156,7 @@ font-family: SFRegular;
           justify-content: space-between;
           top: 40px;
           width: 270px;
+          max-width: 87vw;
           height: 130px;
       }
     
