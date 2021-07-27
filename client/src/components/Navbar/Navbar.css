@@ -8,6 +8,12 @@ body, html {
     width: 100%;
     position: fixed;
     z-index: 10;
+    transition: 0.3s all ease-in-out;
+}
+
+.nav-down{
+    background-color: var(--background-white) !important;
+    transition: 0.3s all ease-in-out;
 }
 
 .navbar-link{
@@ -72,6 +78,9 @@ body, html {
     /* height: 65px; */
 }
 
+.text-blue{
+    color: var(--dark-blue) !important
+}
 
 .responsive-menu {
     display: none;
