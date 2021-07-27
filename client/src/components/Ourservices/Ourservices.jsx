@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import React from 'react';
 import axios from 'axios';
 import Slider from "react-slick";
-import BudgetButton from "../../assets/Button.svg";
 import api from '../../services/api';
 
 import "slick-carousel/slick/slick.css"; 
