@@ -42,11 +42,12 @@ function Contacts() {
                                     <Button />
                                   </div>
                               </div>
-                              <div class='seal-contact'><img src={ShapeContact} alt='foca'/></div>
                           </div>
                       </div>
                   </div>
               </div>
+              <div class='seal-contact'><img src={ShapeContact} alt='foca'/></div>
+
           </div>
     </>
   );
