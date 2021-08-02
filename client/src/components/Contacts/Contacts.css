@@ -3,12 +3,12 @@ body, html {
 }
 
 .contact-background {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: var(--background-white);
 }
 
-.contacts-section {
+#contacts-section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -151,6 +151,16 @@ body, html {
     .contacts-title {
         font-size: 30px;
         text-align: center;
+    }
+    
+    .contacts-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--background-white);
+        height: 667px;
+        padding-top: 48px;
+        padding-right: 5vw;
     }
 
     #secondary-title-contact {

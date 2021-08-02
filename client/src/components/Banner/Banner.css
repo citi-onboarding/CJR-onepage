@@ -4,14 +4,13 @@ body, html {
 
 .banner-section{
     background-color: var(--dark-blue);
-    height: 696px;
+    height: 95vh;
     display: flex;
     flex-direction: column;
 }
 
 #squares {
-    height: 626px;
-    width: 594px;
+    height: 526px;
 }
 
 #small-squares{
@@ -19,7 +18,9 @@ body, html {
 }
 
 .banner-image{
-    width: 594px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
 }
 
 .banner-background{
@@ -28,6 +29,13 @@ body, html {
 
 .banner-up{
     margin-top: 66px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.banner-something{
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -54,14 +62,14 @@ body, html {
 .banner-down{
     background-color: var(--green);
     width: 100%;
-    height: 16px;
+    height: 6vh;
 }
 
 @media (max-width: 900px){
 
     .banner-section{
         background-color: var(--dark-blue);
-        height: 573px;
+        height: 97vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -87,14 +95,14 @@ body, html {
     }
     
     .banner-up{
-        margin-top: 0;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
     
     .banner-text h1{
-        width: 89vw;
+        width: 100%;
         margin-top: 73px;
         color: var(--banner-white);
         font-family: SFMedium;
@@ -103,7 +111,7 @@ body, html {
     }
     
     .banner-text p{
-        width: 89vw;
+        width: 100%;
         color: var(--light-grey);
         font-family: SFRegular;
         font-weight: 400;
@@ -113,6 +121,6 @@ body, html {
     .banner-down{
         background-color: var(--green);
         width: 100%;
-        height: 16px;
+        height: 3vh;
     }
 }

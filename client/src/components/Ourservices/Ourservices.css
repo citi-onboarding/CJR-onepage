@@ -131,7 +131,9 @@ body, html {
     font-family: SFRegular;
     color: #0C0C0E;
   }
-  
+  .slick-arrow{
+    width: 0px;
+  }
   .service-description {
     font-size: 18px;
     width: 226px;

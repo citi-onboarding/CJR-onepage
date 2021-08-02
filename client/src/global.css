@@ -14,9 +14,15 @@
 }
 
 .container{
-    max-width: 1128px;
+    max-width: 1440px;
     width: 82vw;
     margin: auto;
+}
+
+@media (max-width: 900px){
+    .container{
+        width: 87vw;
+    }
 }
 
 @font-face{
@@ -27,6 +33,11 @@
 @font-face{
     font-family: SFRegular;
     src: url('./assets/SF-Pro-Text-Regular.otf');
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 
 h1{
