@@ -114,6 +114,7 @@ html, body {
 
 .cases-card{
   background-color: #003366;  
+  overflow: hidden;
 }
 
 #case-card-title {
@@ -157,6 +158,14 @@ html, body {
     justify-content: space-between;
   }
 
+  #case-card-title {
+    top: 84%;
+  }
+
+  #case-card-description {
+    position: absolute;
+    top: 90%;
+  }
   .case-section .slick-slider {
     margin-top: 5vh;
     width: 80vw;
@@ -169,9 +178,18 @@ html, body {
     height: 100%;
     width: 80vw;
   }
+
+  .cases-card{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
   
   #card-image {
-    width: 100%;
+    /* width: 100%; */
+    transform: translateX(-33%);
+    width: auto;
+    align-self: center;
     height: 60vh;
     mask-image: linear-gradient(to top, rgba(0, 51, 102, 0) 0%, #003366 82.13%);
   }
@@ -215,6 +233,5 @@ html, body {
   .case-left{
     margin-top: 20px;
   }
-
 }
 
